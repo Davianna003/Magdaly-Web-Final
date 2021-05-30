@@ -88,13 +88,13 @@ app.post('/contacto', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'boxingstategym@gmail.com',
-            pass: 'BLACKKIUS500ge'
+            user: 'avadoreavadore003@gmail.com',
+            pass: 'avadore003'
         }
     });
 
     const info = {
-        from: 'boxingstategym@gmail.com',
+        from: 'avadoreavadore003@gmail.com',
         to: 'yamilethp697@gmail.com',
         subecjt: 'Datos para contactar',
         html: contenHTML
