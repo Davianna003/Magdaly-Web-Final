@@ -3,11 +3,6 @@ const app = express();
 const nodemailer = require('nodemailer');
 const port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + "/public"));
-app.use(express.json())
-app.use(express.urlencoded({
-    extended: false
-}));
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/pages/principales/finalhtml.html");
 });
@@ -56,6 +51,11 @@ app.get('/f6', (req, res) => {
 
 
 //form
+app.use(express.static(__dirname + "/public"));
+app.use(express.json())
+app.use(express.urlencoded({
+    extended: false
+}));
 
 app.post('/contacto', (req, res) => {
 
